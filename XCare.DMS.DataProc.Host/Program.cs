@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Threading;
 using System.Windows.Forms;
 using log4net;
+using XCare.DMS.DataProc.MessageHandler;
 
 namespace XCare.DMS.DataProc.Host
 {
@@ -15,9 +15,11 @@ namespace XCare.DMS.DataProc.Host
         [STAThread]
         private static void Main()
         {
-            BindExceptionHandler();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            BindExceptionHandler();
+            MessageBus.Start();
+            Application.ApplicationExit += (sender, e) => { MessageBus.Stop(); };
             Application.Run(new FrmMain());
         }
 
@@ -26,19 +28,10 @@ namespace XCare.DMS.DataProc.Host
             //设置应用程序处理异常方式：ThreadException处理
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             //处理UI线程异常
-            Application.ThreadException += Application_ThreadException;
+            Application.ThreadException += (sender, e) => { Log.Error(null, e.Exception); };
             //处理未捕获的异常
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-        }
-
-        private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
-        {
-            Log.Error(null, e.Exception);
-        }
-
-        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            Log.Error(null, e.ExceptionObject as Exception);
+            AppDomain.CurrentDomain.UnhandledException +=
+                (sender, e) => { Log.Error(null, e.ExceptionObject as Exception); };
         }
     }
 }

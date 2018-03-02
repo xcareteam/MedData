@@ -35,6 +35,7 @@ namespace XCare.DMS.Receiving.Api.Controllers
                 {
                     var itemObj = TinyMapper.Map<YdhlJybgxq>(item);
                     itemObj.Id = Guid.NewGuid();
+                    itemObj.JybgId = obj.Id;
                     return itemObj;
                 }).ToList();
                 return obj;

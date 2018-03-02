@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using XCare.DMS.Entity;
 using XCare.DMS.Message.Bryzxx;
-using XCare.DMS.Message.Configuration.Bryzxx;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -10,7 +10,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(IEnumerable<YdhlBryzxx> bryzxxes)
         {
-            BryzxxMessageForwarder.Forward(new BryzxxCreatedMessage(bryzxxes));
+            MessagePublisher.Publish(new BryzxxCreatedMessage(bryzxxes));
         }
 
         public void Update()

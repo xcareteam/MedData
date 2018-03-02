@@ -1,7 +1,7 @@
 ﻿using System;
 using XCare.DMS.Entity;
-using XCare.DMS.Message.Configuration.Jbbm;
 using XCare.DMS.Message.Jbbm;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -9,7 +9,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(YdhlJbbm jbbm)
         {
-            JbbmMessageForwarder.Forward(new JbbmCreatedMessage(jbbm));
+            MessagePublisher.Publish(new JbbmCreatedMessage(jbbm));
         }
 
         public void Update()

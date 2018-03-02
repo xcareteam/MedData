@@ -1,7 +1,7 @@
 ﻿using System;
 using XCare.DMS.Entity;
-using XCare.DMS.Message.Configuration.Gyzd;
 using XCare.DMS.Message.Gyzd;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -9,7 +9,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(YdhlGyzd zd)
         {
-            GyzdMessageForwarder.Forward(new GyzdCreatedMessage(zd));
+            MessagePublisher.Publish(new GyzdCreatedMessage(zd));
         }
 
         public void Update()

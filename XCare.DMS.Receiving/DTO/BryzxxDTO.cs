@@ -1,50 +1,50 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace XCare.DMS.Receiving.DTO
 {
     public class BryzxxCreationDTO
     {
-        [Required]
+        [DataMember(IsRequired = true)]
         public long Rowid { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public long Zyh { get; set; }
 
         public long? Sqdh { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public long Yzzh { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public byte Lsyz { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Yzmc { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public byte Yzlx { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public decimal Ycjl { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Jldw { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public decimal Sl { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public DateTime? Kssj { get; set; }
 
         public DateTime? Tzsj { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Gytj { get; set; }
 
         public string Sypc { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public short Mrcs { get; set; }
 
         public short? Mzcs { get; set; }
@@ -53,12 +53,12 @@ namespace XCare.DMS.Receiving.DTO
         public string Fysx { get; set; }
         public byte? Yjzx { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public short Xmlx { get; set; }
 
         public int? Code { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Pccode { get; set; }
 
         public byte Sybz { get; set; }

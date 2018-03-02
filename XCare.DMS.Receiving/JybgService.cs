@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using XCare.DMS.Entity;
-using XCare.DMS.Message.Configuration.Jybg;
 using XCare.DMS.Message.Jybg;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -10,7 +10,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(IEnumerable<YdhlJybg> jybgs)
         {
-            JybgMessageForwarder.Forward(new JybgCreatedMessage(jybgs));
+            MessagePublisher.Publish(new JybgCreatedMessage(jybgs));
         }
 
         public void Update()

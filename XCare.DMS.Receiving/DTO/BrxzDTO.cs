@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.Runtime.Serialization;
 
 namespace XCare.DMS.Receiving.DTO
 {
@@ -7,25 +8,25 @@ namespace XCare.DMS.Receiving.DTO
         /// <summary>
         ///     编码
         /// </summary>
-        [Required]
+        [DataMember(IsRequired = true)]
         public int Brxz { get; set; }
 
         /// <summary>
         ///     名称
         /// </summary>
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Xzmc { get; set; }
 
         /// <summary>
         ///     拼音首字母代码
         /// </summary>
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Pydm { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public int Sjxz { get; set; }
 
-        [Required]
+        [DataMember(IsRequired = true)]
         public int Gsxz { get; set; }
     }
 }

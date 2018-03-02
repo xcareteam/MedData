@@ -2,6 +2,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving.Api
 {
@@ -22,6 +23,16 @@ namespace XCare.DMS.Receiving.Api
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            MessagePublisher.Start();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected void Application_End()
+        {
+            MessagePublisher.Stop();
         }
     }
 }

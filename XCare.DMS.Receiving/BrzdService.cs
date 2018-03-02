@@ -1,7 +1,7 @@
 ﻿using System;
 using XCare.DMS.Entity;
 using XCare.DMS.Message.Brzd;
-using XCare.DMS.Message.Configuration.Brzd;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -9,7 +9,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(YdhlBrzd brzd)
         {
-            BrzdMessageForwarder.Forward(new BrzdCreatedMessage(brzd));
+            MessagePublisher.Publish(new BrzdCreatedMessage(brzd));
         }
 
         public void Update()

@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace XCare.DMS.Receiving.DTO
 {
     public class JbxxCreationDTO
     {
+        [DataMember(IsRequired = true)]
         public long Zyh { get; set; }
+
+        [DataMember(IsRequired = true)]
         public string Zyhm { get; set; }
+
+        [DataMember(IsRequired = true)]
         public string Brxm { get; set; }
+
+        [DataMember(IsRequired = true)]
         public double Xb { get; set; }
+
         public int? Nl { get; set; }
         public int? Brqk { get; set; }
         public int? Brxx { get; set; }

@@ -6,6 +6,7 @@ namespace XCare.DMS.Entity
     {
         public Guid Id { get; set; }
         public long Zyh { get; set; }
+        public DateTime Clrq { get; set; }
         public string Dbcs { get; set; }
         public string Xbcs { get; set; }
         public string Prl { get; set; }

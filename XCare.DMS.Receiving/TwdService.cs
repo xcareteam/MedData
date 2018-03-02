@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using XCare.DMS.Entity;
-using XCare.DMS.Message.Configuration.Twd;
 using XCare.DMS.Message.Twd;
+using XCare.DMS.Receiving.MessageService;
 
 namespace XCare.DMS.Receiving
 {
@@ -10,7 +10,7 @@ namespace XCare.DMS.Receiving
     {
         public void Create(IEnumerable<YdhlTwd> twds)
         {
-            TwdMessageForwarder.Forward(new TwdCreatedMessage(twds));
+            MessagePublisher.Publish(new TwdCreatedMessage(twds));
         }
 
         public void Update()

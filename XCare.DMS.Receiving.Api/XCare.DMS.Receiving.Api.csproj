@@ -165,10 +165,17 @@
       <Project>{ea158215-a793-4a72-99af-d450b0cacdf9}</Project>
       <Name>XCare.DMS.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XCare.DMS.Receiving.MessageService\XCare.DMS.Receiving.MessageService.csproj">
+      <Project>{999e3ac1-070e-4afb-9b15-5f1006c8af55}</Project>
+      <Name>XCare.DMS.Receiving.MessageService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XCare.DMS.Receiving\XCare.DMS.Receiving.csproj">
       <Project>{6b3a88c3-f584-48be-828b-e3d46054b9c5}</Project>
       <Name>XCare.DMS.Receiving</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\xcare_receiving.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

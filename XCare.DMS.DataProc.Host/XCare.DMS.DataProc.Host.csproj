@@ -126,10 +126,6 @@
       <Project>{ea158215-a793-4a72-99af-d450b0cacdf9}</Project>
       <Name>XCare.DMS.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XCare.DMS.Message.Configuration\XCare.DMS.Message.Configuration.csproj">
-      <Project>{ed78164e-607e-4c34-9957-4e02cab76f07}</Project>
-      <Name>XCare.DMS.Message.Configuration</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XCare.DMS.Message\XCare.DMS.Message.csproj">
       <Project>{c2659157-ebe2-4796-9422-766a3f89b0a1}</Project>
       <Name>XCare.DMS.Message</Name>

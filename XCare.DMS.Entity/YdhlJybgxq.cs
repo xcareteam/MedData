@@ -12,5 +12,6 @@ namespace XCare.DMS.Entity
         public string Dw { get; set; }
         public DateTime? DateTest { get; set; }
         public string Ybh { get; set; }
+        public Guid JybgId { get; set; }
     }
 }

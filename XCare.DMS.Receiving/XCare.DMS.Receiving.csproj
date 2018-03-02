@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,15 +73,16 @@
       <Project>{ea158215-a793-4a72-99af-d450b0cacdf9}</Project>
       <Name>XCare.DMS.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XCare.DMS.Message.Configuration\XCare.DMS.Message.Configuration.csproj">
-      <Project>{ed78164e-607e-4c34-9957-4e02cab76f07}</Project>
-      <Name>XCare.DMS.Message.Configuration</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XCare.DMS.Message\XCare.DMS.Message.csproj">
       <Project>{c2659157-ebe2-4796-9422-766a3f89b0a1}</Project>
       <Name>XCare.DMS.Message</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XCare.DMS.Receiving.MessageService\XCare.DMS.Receiving.MessageService.csproj">
+      <Project>{999e3ac1-070e-4afb-9b15-5f1006c8af55}</Project>
+      <Name>XCare.DMS.Receiving.MessageService</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
