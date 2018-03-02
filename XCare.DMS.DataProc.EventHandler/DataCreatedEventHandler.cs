@@ -9,7 +9,7 @@ namespace XCare.DMS.DataProc.EventHandler
     {
         public void Handle(DataCreatedEvent<Guid> @event)
         {
-          
+             
         }
     }
 }

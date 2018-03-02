@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(840, 463);
             this.Name = "FrmMain";
             this.Text = "XCare数据处理服务";
             this.ResumeLayout(false);
@@ -42,6 +42,8 @@
         }
 
         #endregion
+
+
     }
 }
 

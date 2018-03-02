@@ -16,10 +16,6 @@ namespace XCare.DMS.DataProc.Host
         public FrmMain()
         {
             InitializeComponent();
-            Load += (sender, e) =>
-            {
-                DaemonService.Start();
-            };
         }
     }
 }

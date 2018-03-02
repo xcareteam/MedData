@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using log4net;
+using XCare.DMS.DataProc.Daemon;
 using XCare.DMS.DataProc.MessageHandler;
 
 namespace XCare.DMS.DataProc.Host
@@ -19,6 +20,7 @@ namespace XCare.DMS.DataProc.Host
             Application.SetCompatibleTextRenderingDefault(false);
             BindExceptionHandler();
             MessageBus.Start();
+            DaemonService.Start();
             Application.ApplicationExit += (sender, e) => { MessageBus.Stop(); };
             Application.Run(new FrmMain());
         }

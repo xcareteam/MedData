@@ -87,6 +87,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XCare.DMS.DataProc.Common\XCare.DMS.DataProc.Common.csproj">
+      <Project>{9ee4213b-7645-40cc-b8c1-4b30dd2ae287}</Project>
+      <Name>XCare.DMS.DataProc.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XCare.DMS.DataProc.EventHandler\XCare.DMS.DataProc.EventHandler.csproj">
       <Project>{4f8acddb-1bd6-448a-80f8-dce1fa89d575}</Project>
       <Name>XCare.DMS.DataProc.EventHandler</Name>

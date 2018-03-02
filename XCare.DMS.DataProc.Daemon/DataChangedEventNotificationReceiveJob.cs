@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Xml.Serialization;
 using log4net;
 using Quartz;
 using ServiceBroker.Net;
+using XCare.DMS.DataProc.Common;
 
 namespace XCare.DMS.DataProc.Daemon
 {
@@ -17,15 +16,12 @@ namespace XCare.DMS.DataProc.Daemon
         private static readonly XmlSerializer MessageDeserializer =
             new XmlSerializer(typeof (DataChangedEventNotification));
 
-        private static readonly string XCareConnectionString =
-            ConfigurationManager.ConnectionStrings["XCareConnectionString"].ConnectionString;
-
         private static readonly ILog DmlMsgLog = LogManager.GetLogger("DMLMsgLogger");
         private static readonly ILog ErrorLog = LogManager.GetLogger("ErrorLogger");
 
         public void Execute(IJobExecutionContext context)
         {
-            using (var conn = new SqlConnection(XCareConnectionString))
+            using (var conn = DbHelper.GetDbConnection())
             {
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();

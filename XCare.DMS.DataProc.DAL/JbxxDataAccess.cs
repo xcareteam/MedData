@@ -1,5 +1,6 @@
 ﻿using System;
 using Dapper;
+using XCare.DMS.DataProc.Common;
 using XCare.DMS.Entity;
 
 namespace XCare.DMS.DataProc.DAL

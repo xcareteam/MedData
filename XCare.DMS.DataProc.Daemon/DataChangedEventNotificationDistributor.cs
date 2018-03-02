@@ -1,4 +1,5 @@
 ﻿using System;
+using XCare.DMS.DataProc.Common;
 
 namespace XCare.DMS.DataProc.Daemon
 {
@@ -6,7 +7,21 @@ namespace XCare.DMS.DataProc.Daemon
     {
         public static void Distribute(DataChangedEventNotification notification)
         {
-            Console.WriteLine("notified");
+            if (notification.ApplicationName == DbHelper.ApplicationName)
+            {
+            }
+            else
+            {
+                switch (notification.Action)
+                {
+                    case DataManipulationOption.Insert:
+                        break;
+                    case DataManipulationOption.Update:
+                        break;
+                    case DataManipulationOption.Delete:
+                        break;
+                }
+            }
         }
     }
 }
